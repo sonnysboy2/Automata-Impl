@@ -10,6 +10,7 @@ public class State extends AState {
     super(stateName, acceptState);
     this.transitions = Collections.synchronizedList(new ArrayList<>());
   }
+  
 
   /**
    * Add a transition to the next state.

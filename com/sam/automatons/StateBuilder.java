@@ -38,6 +38,7 @@ public class StateBuilder {
     this.state.addTransition(trans);
     return this;
   }
+  
 /**
   Shorthand for addTransition(symbol, state.stateNum)
 */

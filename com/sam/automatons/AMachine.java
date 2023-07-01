@@ -17,6 +17,7 @@ public abstract class AMachine {
     this.states = Collections.synchronizedMap(new HashMap<String, State>());
     this.startState = this.currentState = null;
   }
+  
 
   /**
    * @returns True if the machine accepts this string.

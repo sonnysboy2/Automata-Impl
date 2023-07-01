@@ -18,6 +18,7 @@ public abstract class AState {
     this.accept = acceptState;
   }
 
+  
   public String getStateName() {
     return this.stateName;
   }
