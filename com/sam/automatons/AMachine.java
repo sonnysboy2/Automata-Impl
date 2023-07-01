@@ -17,7 +17,6 @@ public abstract class AMachine {
     this.states = Collections.synchronizedMap(new HashMap<String, State>());
     this.startState = this.currentState = null;
   }
-  
 
   /**
    * @returns True if the machine accepts this string.
@@ -43,7 +42,8 @@ public abstract class AMachine {
       throw new RuntimeException("Start state should be null if you're setting it");
     if (this.currentState != null)
       throw new RuntimeException("you should not be updating the start state while the machine is running you lunatic");
-    if (!this.states.containsValue(state)) addState(state);
+    if (!this.states.containsValue(state))
+      addState(state);
     this.startState = state;
   }
 

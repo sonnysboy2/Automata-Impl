@@ -4,13 +4,12 @@ public class Transition {
 
   private final char symbol;
   private final String to;
-  
+
   public Transition(final char symbol, final String to) {
     this.symbol = symbol;
     this.to = to;
   }
 
-  
   /**
    * I really don't know what else to call this, man
    * 
@@ -29,6 +28,6 @@ public class Transition {
   }
 
   public String toString() {
-    return String.format("Transition@%d{symbol=%c,to=%d}",hashCode(),symbol,to);
+    return String.format("Transition@%d{symbol=%c,to=%d}", hashCode(), symbol, to);
   }
 }

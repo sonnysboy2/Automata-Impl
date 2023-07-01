@@ -28,25 +28,24 @@ public class StateBuilder {
     return new StateBuilder(name, acceptState);
   }
 
-  public StateBuilder addTransition(final char symbol,  final String stateName) {
-    this.state.addTransition(symbol,stateName );
+  public StateBuilder addTransition(final char symbol, final String stateName) {
+    this.state.addTransition(symbol, stateName);
     return this;
   }
-  
 
   public StateBuilder addTransition(Transition trans) {
     this.state.addTransition(trans);
     return this;
   }
-  
-/**
-  Shorthand for addTransition(symbol, state.stateNum)
-*/
+
+  /**
+   * Shorthand for addTransition(symbol, state.stateNum)
+   */
   public StateBuilder loopback(final char symbol) {
     addTransition(symbol, this.state.getStateName());
     return this;
   }
-  
+
   /**
    * Declares this state an accept state.
    */
